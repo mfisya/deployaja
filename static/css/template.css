@@ -1,0 +1,272 @@
+
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .modal {
+            background-color: var(--card-bg);
+            border-radius: 1rem;
+            width: 100%;
+            max-width: 800px;
+            max-height: 90vh;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-header {
+            padding: 1.25rem;
+            background-color: rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+
+        .modal-title-icon {
+            margin-right: 0.75rem;
+            color: var(--accent);
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .modal-close:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+        }
+
+        .modal-body {
+            padding: 1.5rem;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .template-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .template-tab {
+            padding: 0.75rem 1.5rem;
+            cursor: pointer;
+            position: relative;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .template-tab.active {
+            color: var(--accent);
+        }
+
+        .template-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        .template-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .template-card {
+            background-color: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .template-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .template-card.selected {
+            border: 2px solid var(--accent);
+            background-color: rgba(0, 210, 255, 0.05);
+        }
+
+        .template-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .template-name {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .template-description {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .modal-footer {
+            padding: 1.25rem;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.75rem;
+            position: sticky;
+            bottom: 0;
+        }
+
+        .primary-button {
+            background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .primary-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 210, 255, 0.3);
+        }
+
+        .secondary-button {
+            background-color: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .secondary-button:hover {
+            border-color: var(--text-primary);
+            color: var(--text-primary);
+        }
+
+        .template-content {
+            display: none;
+        }
+
+        .template-content.active {
+            display: block;
+        }
+
+        /* Icons for different frameworks/libraries */
+        .nodejs-icon { color: #68a063; }
+        .java-icon { color: #f89820; }
+        .golang-icon { color: #00add8; }
+        .rust-icon { color: #e33b26; }
+        .python-icon { color: #3776ab; }
+        .ruby-icon { color: #cc342d; }
+        .php-icon { color: #777bb3; }
+        .elixir-icon { color: #4e2a8e; }
+        .csharp-icon { color: #68217a; }
+        
+        .nextjs-icon { color: #ffffff; }
+        .nuxtjs-icon { color: #00c58e; }
+        .svelte-icon { color: #ff3e00; }
+        .vue-icon { color: #42b883; }
+        .angular-icon { color: #dd0031; }
+        .react-icon { color: #61dafb; }
+        .qwik-icon { color: #ac7ef4; }
+        .solid-icon { color: #4d87c6; }
+        .astro-icon { color: #ff5d01; }
+        .remix-icon { color: #e8f2ff; }
+
+        /* For framework icons that need a different background */
+        .framework-bg {
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .react-bg { background-color: #20232a; }
+        .nextjs-bg { background-color: #000000; }
+        .angular-bg { background-color: #1976d2; }
+
+        @media (max-width: 768px) {
+            .template-grid {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            }
+            
+            .template-card {
+                padding: 1rem;
+            }
+            
+            .template-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 1.2rem;
+                margin-bottom: 0.75rem;
+            }
+            
+            .template-name {
+                font-size: 0.9rem;
+            }
+            
+            .template-description {
+                font-size: 0.75rem;
+            }
+            
+            .template-tab {
+                padding: 0.75rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
