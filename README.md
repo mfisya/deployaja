@@ -1,0 +1,2 @@
+# deployaja-web
+svelte
